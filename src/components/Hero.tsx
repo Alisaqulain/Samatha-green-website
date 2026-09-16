@@ -17,6 +17,8 @@ type Slide = {
   features?: string[];
   primaryCta: { label: string; href: string };
   secondaryCta: { label: string; href: string };
+  showBrandMark?: boolean;
+  imagePosition?: string;
 };
 
 const slides: Slide[] = [
@@ -68,6 +70,8 @@ const slides: Slide[] = [
     ],
     primaryCta: { label: "Let's Talk", href: "/contact" },
     secondaryCta: { label: "About Us", href: "/about" },
+    showBrandMark: true,
+    imagePosition: "object-[72%_center]",
   },
   {
     image: "/slide-5.png",
@@ -140,6 +144,19 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
   );
 }
 
+function RenemuBrandMark() {
+  return (
+    <div className="pointer-events-none select-none text-right drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+      <p className="font-display text-[clamp(2.6rem,7vw,5rem)] font-bold leading-none tracking-tight text-white">
+        rene<span className="text-brand-green">μx</span>
+      </p>
+      <p className="mt-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-white/75 sm:text-xs sm:tracking-[0.34em]">
+        Energy for a Better Future
+      </p>
+    </div>
+  );
+}
+
 export default function Hero() {
   const [index, setIndex] = useState(0);
   const [activeFeature, setActiveFeature] = useState(0);
@@ -167,7 +184,7 @@ export default function Hero() {
         : "sm:grid-cols-2 lg:grid-cols-4";
 
   return (
-    <section className="relative min-h-[calc(100vh-78px)] overflow-hidden bg-brand-navy">
+    <section className="relative min-h-[calc(100vh-88px)] overflow-hidden bg-brand-navy">
       {slides.map((item, i) => (
         <div
           key={`${item.image}-${i}`}
@@ -180,7 +197,7 @@ export default function Hero() {
             alt=""
             fill
             priority={i === 0}
-            className="object-cover object-center"
+            className={`object-cover ${item.imagePosition ?? "object-center"}`}
             sizes="100vw"
           />
         </div>
@@ -206,7 +223,7 @@ export default function Hero() {
         <Arrow direction="right" />
       </button>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-78px)] max-w-[1280px] flex-col justify-center px-4 py-16 pb-20 sm:px-6 lg:px-8 lg:py-20">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-88px)] max-w-[1280px] flex-col justify-center px-4 py-16 pb-24 sm:px-6 lg:px-8 lg:py-20">
         <div key={index} className="max-w-2xl">
           <h1 className="animate-fade-up font-display text-[clamp(2.2rem,5.5vw,4.2rem)] font-extrabold uppercase leading-[0.98] tracking-tight">
             {slide.title.map((line) => (
@@ -276,7 +293,13 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 sm:bottom-8">
+      {slide.showBrandMark ? (
+        <div className="absolute bottom-16 right-4 z-20 animate-fade-in sm:bottom-20 sm:right-10 lg:right-14">
+          <RenemuBrandMark />
+        </div>
+      ) : null}
+
+      <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2.5 sm:bottom-7">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -284,8 +307,10 @@ export default function Hero() {
             aria-label={`Go to slide ${i + 1}`}
             aria-current={i === index}
             onClick={() => setIndex(i)}
-            className={`h-2.5 rounded-full transition-all duration-300 ${
-              i === index ? "w-8 bg-brand-green" : "w-2.5 bg-white/45 hover:bg-white/70"
+            className={`rounded-full transition-all duration-300 ${
+              i === index
+                ? "h-2.5 w-8 bg-brand-green sm:h-3 sm:w-9"
+                : "h-2.5 w-2.5 bg-white/55 hover:bg-white/80 sm:h-3 sm:w-3"
             }`}
           />
         ))}

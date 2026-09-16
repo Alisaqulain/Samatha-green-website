@@ -125,14 +125,14 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 shadow-sm backdrop-blur">
-      <div className="mx-auto flex h-20 w-full items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div className="mx-auto flex h-[88px] w-full items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 xl:px-10">
         <Link href="/" className="flex shrink-0 items-center">
           <Image
             src="/logo.png"
             alt="Samatha Green Energy Solutions"
-            width={280}
-            height={64}
-            className="h-12 w-auto object-contain sm:h-14"
+            width={320}
+            height={80}
+            className="h-14 w-auto object-contain sm:h-16 lg:h-[4.5rem]"
             priority
           />
         </Link>

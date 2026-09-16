@@ -49,7 +49,7 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
                 alt="Samatha Green Energy Solutions"
                 width={280}
                 height={64}
-                className="h-12 w-auto object-contain sm:h-14"
+                className="h-14 w-auto object-contain sm:h-16"
               />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">

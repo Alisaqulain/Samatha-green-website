@@ -44,7 +44,7 @@ function CalculatorIcon() {
 
 function HomeIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M4 10.5L12 4L20 10.5V20H14.5V14.5H9.5V20H4V10.5Z"
         stroke="currentColor"
@@ -57,7 +57,7 @@ function HomeIcon() {
 
 function ShieldIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M12 3.5L19 6.5V11.5C19 16 15.8 19.6 12 20.5C8.2 19.6 5 16 5 11.5V6.5L12 3.5Z"
         stroke="currentColor"
@@ -77,7 +77,7 @@ function ShieldIcon() {
 
 function WrenchIcon() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <path
         d="M14.7 6.3A4.2 4.2 0 0 0 9.5 9.8L4.8 14.5L9.5 19.2L14.2 14.5A4.2 4.2 0 0 0 17.7 9.3L15.2 11.8L12.2 8.8L14.7 6.3Z"
         stroke="currentColor"
@@ -131,7 +131,7 @@ export default function SolarCalculatorSection() {
         </p>
       </div>
 
-      <div className="bg-[#e8eef5]">
+      <div className="bg-[#eef3f8]">
         <div className="mx-auto grid max-w-[1280px] gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:px-8 lg:py-16">
           <div>
             <p className="text-xs font-bold tracking-[0.14em] text-brand-green">SOLAR CALCULATOR</p>
@@ -139,8 +139,8 @@ export default function SolarCalculatorSection() {
               Estimate Your Solar System Size and Savings
             </h3>
             <p className="mt-3 max-w-xl text-[0.95rem] leading-relaxed text-slate-500">
-              Enter your monthly electricity bill and tariff to get a quick estimate of system
-              size, monthly units, and potential yearly savings.
+              Enter your monthly electricity bill and tariff to get a quick planning estimate
+              before our team prepares a detailed proposal.
             </p>
 
             <div className="mt-7 rounded-[28px] border border-white/80 bg-white p-6 shadow-[0_18px_50px_rgba(11,42,74,0.08)] sm:p-8">
@@ -225,8 +225,8 @@ export default function SolarCalculatorSection() {
               Solar solutions for every property type
             </h3>
             <p className="mt-3 text-[0.95rem] leading-8 text-slate-500">
-              Select the closest category and we will guide you to the right reneμ solar package
-              for your property.
+              Select the closest category during enquiry and we will guide you with system sizing,
+              cost, subsidy, installation timeline, and maintenance options.
             </p>
 
             <div className="mt-6 flex flex-col gap-3">
@@ -246,7 +246,7 @@ export default function SolarCalculatorSection() {
                     }`}
                   >
                     <span
-                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition ${
+                      className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full transition ${
                         active
                           ? "bg-brand-green text-white"
                           : "bg-brand-green/10 text-brand-green group-hover:bg-brand-green group-hover:text-white"
@@ -255,7 +255,7 @@ export default function SolarCalculatorSection() {
                       <Icon />
                     </span>
                     <span>
-                      <span className="block text-base font-semibold text-brand-navy">
+                      <span className="block text-lg font-semibold text-brand-navy">
                         {option.label}
                       </span>
                       <span className="mt-0.5 block text-sm text-slate-500">
