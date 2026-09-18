@@ -2,6 +2,7 @@ export type ProjectTab = {
   label: string;
   image: string;
   description: string;
+  heading?: string;
 };
 
 export type Project = {
@@ -14,76 +15,8 @@ export type Project = {
   tabs: ProjectTab[];
 };
 
+/** Order matches original carousel pages (Residential first). */
 export const projects: Project[] = [
-  {
-    title: "Rooftop Structure Installation in Progress",
-    location: "Bengaluru",
-    category: "Commercial",
-    image: "/project-real-1.png",
-    description:
-      "Commercial rooftop structure work in progress with aligned mounting rails prepared for large-scale solar module installation.",
-    specs: ["Type: Commercial Rooftop", "Stage: Structure Installation", "Location: Bengaluru"],
-    tabs: [
-      {
-        label: "Project",
-        image: "/project-real-1.png",
-        description:
-          "Structural framework and mounting preparation for a commercial rooftop solar array, focused on load distribution and long-term durability.",
-      },
-      {
-        label: "Site View",
-        image: "/project-real-2.png",
-        description:
-          "Wide rooftop view showing progress across mounting rows before final module placement and electrical interconnection.",
-      },
-    ],
-  },
-  {
-    title: "Large-Scale Commercial Rooftop Solar Array",
-    location: "Bengaluru",
-    category: "Commercial",
-    image: "/project-real-2.png",
-    description:
-      "A large commercial rooftop solar installation designed for daytime load offset and long-term operating-cost reduction.",
-    specs: ["Type: Commercial Rooftop", "Focus: High Daytime Generation", "Location: Bengaluru"],
-    tabs: [
-      {
-        label: "Project",
-        image: "/project-real-2.png",
-        description:
-          "Completed commercial rooftop array arranged for efficient generation, service access, and consistent module alignment.",
-      },
-      {
-        label: "Array Detail",
-        image: "/project-3.jpg",
-        description:
-          "Close view of module rows and cable routing planned for reliable performance and easier maintenance.",
-      },
-    ],
-  },
-  {
-    title: "3kW Residential Rooftop Solar Installation",
-    location: "Bengaluru",
-    category: "Residential",
-    image: "/project-real-3.png",
-    description:
-      "A compact 3 kW residential rooftop solar system sized for daily household consumption and cleaner energy usage.",
-    specs: ["Type: On-Grid", "Solar PV Capacity: 3 kW", "Location: Bengaluru"],
-    tabs: [
-      {
-        label: "Project",
-        image: "/project-real-3.png",
-        description:
-          "Residential rooftop installation completed for dependable daytime generation and reduced grid dependence.",
-      },
-      {
-        label: "System View",
-        image: "/project-2.jpg",
-        description:
-          "Final rooftop layout optimized for available roof space, shading clearance, and neat cable management.",
-      },
-    ],
-  },
   {
     title: "Rooftop Solar Power Hybrid System Installation",
     location: "Hosa Road, Bengaluru",
@@ -100,6 +33,7 @@ export const projects: Project[] = [
     tabs: [
       {
         label: "Project",
+        heading: "Rooftop Solar Power Hybrid System Installation Project",
         image: "/project-1.jpg",
         description:
           "The project requirement was a hybrid solar system. Since the client did not have a permanent EB/Grid connection, the system was configured with zero export so electricity can be used from multiple sources: temporary grid/EB, solar, and battery.",
@@ -131,48 +65,115 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "5kW On-Grid Solar System for Independent Home",
-    location: "Whitefield, Bengaluru",
+    title: "Rooftop Solar Power System Installation",
+    location: "Akshayanagar West, Bengaluru",
     category: "Residential",
-    image: "/project-2.jpg",
+    image: "/project-real-1.png",
     description:
-      "A 5 kW on-grid rooftop solar system installed for an independent home to reduce monthly electricity bills with clean daytime generation.",
-    specs: ["Type: On-Grid", "Solar PV Capacity: 5 kW", "Location: Whitefield"],
+      "A 3 kW rooftop on-grid solar power system installed at Akshayanagar West, Bengaluru to support daily residential electricity needs with efficient clean energy generation.",
+    specs: [
+      "Type: GTI Inverter",
+      "Solar PV Capacity: 3 kW",
+      "On-grid Inverter: 3 kW",
+    ],
     tabs: [
       {
         label: "Project",
-        image: "/project-2.jpg",
+        heading: "Rooftop Solar Power System Installation Project",
+        image: "/project-real-1.png",
         description:
-          "Residential on-grid solar setup planned around household daytime demand and available rooftop area.",
+          "A 3 kW rooftop solar power system was installed to provide efficient and sustainable energy for daily electricity needs. It helps reduce power costs, supports clean energy usage, and ensures reliable solar power generation for the residential house.",
       },
       {
         label: "Solar PV",
-        image: "/project-real-3.png",
+        image: "/project-2.jpg",
         description:
-          "Modules positioned for strong generation performance with practical walkways for future servicing.",
+          "Rooftop PV modules positioned for dependable daytime generation using available roof space.",
+      },
+      {
+        label: "On-Grid Inverter",
+        image: "/project-4.jpg",
+        description:
+          "On-grid inverter converts solar DC into usable AC and connects with the utility grid.",
+      },
+      {
+        label: "System View",
+        image: "/project-5.jpg",
+        description:
+          "Completed system view showing reliable generation layout and accessible installation details.",
       },
     ],
   },
   {
-    title: "Commercial Rooftop Solar for Office Campus",
-    location: "Electronic City, Bengaluru",
+    title: "Commercial Rooftop Solar Power System Installation",
+    location: "Turahalli",
     category: "Commercial",
-    image: "/project-3.jpg",
+    image: "/project-real-2.png",
     description:
-      "Commercial rooftop solar for an office campus focused on daytime load offset, predictable energy costs, and long-term ROI.",
-    specs: ["Type: Commercial Rooftop", "Focus: Daytime Load Offset", "Location: Electronic City"],
+      "A 20 kW rooftop on-grid solar power system installed at Turahalli for high-capacity and efficient energy generation.",
+    specs: [
+      "Type: GTI Inverter",
+      "Solar PV Capacity: 20 kW",
+      "On-grid Inverter: 20 kW",
+    ],
     tabs: [
       {
         label: "Project",
-        image: "/project-3.jpg",
-        description:
-          "Campus rooftop array commissioned to support commercial daytime operations with clean solar generation.",
-      },
-      {
-        label: "Array Detail",
+        heading: "Commercial Rooftop Solar Power System Installation Project",
         image: "/project-real-2.png",
         description:
-          "Uniform module rows and structured cabling for reliable commercial plant performance.",
+          "A 20 kW rooftop solar power system was installed to provide high-capacity and efficient energy generation for commercial and large residential applications. It helps reduce electricity expenses, supports sustainable energy usage, and ensures reliable power supply for daily operations.",
+      },
+      {
+        label: "Solar PV",
+        image: "/project-3.jpg",
+        description:
+          "Commercial rooftop array arranged for efficient generation, service access, and consistent module alignment.",
+      },
+      {
+        label: "On-Grid Inverter",
+        image: "/project-4.jpg",
+        description:
+          "20 kW on-grid inverter installed for high-capacity daytime generation and grid interconnection.",
+      },
+    ],
+  },
+  {
+    title: "Residential Rooftop Solar Power System Installation",
+    location: "Bengaluru",
+    category: "Residential",
+    image: "/project-real-3.png",
+    description:
+      "A 3 kW rooftop solar power system installed to provide efficient and reliable energy for daily residential electricity needs.",
+    specs: [
+      "Solar PV Capacity: 3 kW",
+      "Application: Residential Rooftop",
+    ],
+    tabs: [
+      {
+        label: "Project",
+        heading: "Residential Rooftop Solar Power System Installation Project",
+        image: "/project-real-3.png",
+        description:
+          "A 3 kW rooftop solar power system was installed to provide efficient and reliable energy for daily electricity needs. It helps reduce electricity bills, supports clean energy usage, and ensures sustainable power generation for residential applications.",
+      },
+      {
+        label: "Solar PV",
+        image: "/project-2.jpg",
+        description:
+          "Residential rooftop modules installed for dependable daytime generation and reduced grid dependence.",
+      },
+      {
+        label: "Installation",
+        image: "/project-real-1.png",
+        description:
+          "Installation completed with neat mounting structure, cable routing, and service access.",
+      },
+      {
+        label: "System View",
+        image: "/project-5.jpg",
+        description:
+          "Final rooftop layout optimized for available roof space and reliable residential generation.",
       },
     ],
   },

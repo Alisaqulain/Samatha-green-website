@@ -148,7 +148,7 @@ function RenemuBrandMark() {
   return (
     <div className="pointer-events-none select-none text-right drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
       <p className="font-display text-[clamp(2.6rem,7vw,5rem)] font-bold leading-none tracking-tight text-white">
-        rene<span className="text-brand-green">μx</span>
+        rene<span className="text-brand-green">μX</span>
       </p>
       <p className="mt-2.5 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-white/75 sm:text-xs sm:tracking-[0.34em]">
         Energy for a Better Future

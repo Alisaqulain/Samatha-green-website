@@ -22,15 +22,12 @@ const whyItems = [
   { label: "Expert Site Survey & Design", icon: "survey" },
   { label: "Quality Materials & Reliable Installation", icon: "quality" },
   { label: "AMC Service Support", icon: "amc" },
-  { label: "Fast Issue Resolution", icon: "fast" },
-  { label: "Mobile App Monitoring", icon: "app" },
-  { label: "Residential to Industrial Solutions", icon: "scale" },
 ] as const;
 
 function ProvideIcon({ type }: { type: (typeof provideItems)[number]["icon"] }) {
   const common = {
-    width: 20,
-    height: 20,
+    width: 24,
+    height: 24,
     viewBox: "0 0 24 24",
     fill: "none",
     "aria-hidden": true as const,
@@ -40,56 +37,86 @@ function ProvideIcon({ type }: { type: (typeof provideItems)[number]["icon"] }) 
     case "grid":
       return (
         <svg {...common}>
-          <path d="M4 4H10V10H4V4ZM14 4H20V10H14V4ZM4 14H10V20H4V14ZM14 14H20V20H14V14Z" stroke="currentColor" strokeWidth="1.6" />
+          <path
+            d="M4 4H10V10H4V4ZM14 4H20V10H14V4ZM4 14H10V20H4V14ZM14 14H20V20H14V14Z"
+            stroke="currentColor"
+            strokeWidth="1.7"
+          />
         </svg>
       );
     case "battery":
       return (
         <svg {...common}>
-          <rect x="3" y="7" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M19 10H21V14H19" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M7 10V14M11 10V14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <rect x="3" y="7" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M19 10H21V14H19" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M7 10V14M11 10V14" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
       );
     case "hybrid":
       return (
         <svg {...common}>
-          <path d="M12 3L4 12H10L8 21L20 10H14L12 3Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path
+            d="M13 3L5 14H12L11 21L19 10H12L13 3Z"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "storage":
       return (
         <svg {...common}>
-          <rect x="5" y="4" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M9 8H15M9 12H15M9 16H13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <rect x="5" y="4" width="14" height="16" rx="2" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M9 8H15M9 12H15M9 16H13" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
       );
     case "clock":
       return (
         <svg {...common}>
-          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.6" />
-          <path d="M12 8V12L15 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.7" />
+          <path d="M12 8V12L15 14" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
       );
     case "roof":
       return (
         <svg {...common}>
-          <path d="M3 12L12 4L21 12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M6 11V20H18V11" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+          <path
+            d="M3 12L12 4L21 12"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path d="M6 11V20H18V11" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
         </svg>
       );
     case "ground":
       return (
         <svg {...common}>
-          <path d="M4 18H20M6 18V10L12 6L18 10V18" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-          <path d="M10 18V13H14V18" stroke="currentColor" strokeWidth="1.6" />
+          <path
+            d="M4 18H20M6 18V10L12 6L18 10V18"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinejoin="round"
+          />
+          <path d="M10 18V13H14V18" stroke="currentColor" strokeWidth="1.7" />
         </svg>
       );
     case "carport":
       return (
         <svg {...common}>
-          <path d="M4 14V10L12 5L20 10V14" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
-          <path d="M5 18H9M15 18H19M4 14H20" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          <path
+            d="M4 14V10L12 5L20 10V14"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5 18H9M15 18H19M4 14H20"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+          />
         </svg>
       );
   }
@@ -97,8 +124,8 @@ function ProvideIcon({ type }: { type: (typeof provideItems)[number]["icon"] }) 
 
 function WhyIcon({ type }: { type: (typeof whyItems)[number]["icon"] }) {
   const common = {
-    width: 16,
-    height: 16,
+    width: 18,
+    height: 18,
     viewBox: "0 0 24 24",
     fill: "none",
     "aria-hidden": true as const,
@@ -108,47 +135,53 @@ function WhyIcon({ type }: { type: (typeof whyItems)[number]["icon"] }) {
     case "epc":
       return (
         <svg {...common}>
-          <path d="M4 19V5H14L20 11V19H4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-          <path d="M14 5V11H20" stroke="currentColor" strokeWidth="1.8" />
+          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.9" />
+          <path
+            d="M8.5 12.2L10.8 14.5L15.5 9.5"
+            stroke="currentColor"
+            strokeWidth="1.9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "survey":
       return (
         <svg {...common}>
-          <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="1.8" />
-          <path d="M20 20L16.5 16.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          <path
+            d="M12 21S6 15.2 6 10.5A6 6 0 0 1 18 10.5C18 15.2 12 21 12 21Z"
+            stroke="currentColor"
+            strokeWidth="1.9"
+          />
+          <circle cx="12" cy="10.5" r="2.2" stroke="currentColor" strokeWidth="1.9" />
         </svg>
       );
     case "quality":
       return (
         <svg {...common}>
-          <path d="M12 3L19 6.5V11.5C19 16 15.8 19.5 12 20.5C8.2 19.5 5 16 5 11.5V6.5L12 3Z" stroke="currentColor" strokeWidth="1.8" />
+          <path
+            d="M12 3L19 6.5V11.5C19 16 15.8 19.5 12 20.5C8.2 19.5 5 16 5 11.5V6.5L12 3Z"
+            stroke="currentColor"
+            strokeWidth="1.9"
+          />
+          <path
+            d="M9.2 12L11.1 13.9L14.8 10"
+            stroke="currentColor"
+            strokeWidth="1.9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </svg>
       );
     case "amc":
       return (
         <svg {...common}>
-          <path d="M12 7V12L15 14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-          <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
-        </svg>
-      );
-    case "fast":
-      return (
-        <svg {...common}>
-          <path d="M13 3L5 14H12L11 21L19 10H12L13 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
-        </svg>
-      );
-    case "app":
-      return (
-        <svg {...common}>
-          <rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" strokeWidth="1.8" />
-          <path d="M10 17H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-        </svg>
-      );
-    case "scale":
-      return (
-        <svg {...common}>
-          <path d="M4 19H20M6 19V11H10V19M14 19V7H18V19" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+          <path
+            d="M14.7 6.3A4 4 0 0 0 9.2 9.6L4.8 14L9.2 18.4L13.6 14A4 4 0 0 0 17 9.2L14.5 11.7L12 9.2L14.7 6.3Z"
+            stroke="currentColor"
+            strokeWidth="1.9"
+            strokeLinejoin="round"
+          />
         </svg>
       );
   }
@@ -159,58 +192,60 @@ export default function ProcessSection() {
     <>
       <section id="services" className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-[1100px] text-center">
-          <p className="text-xs font-bold tracking-[0.16em] text-brand-green">OUR PROCESS</p>
-          <h2 className="mx-auto mt-3 max-w-3xl font-display text-[clamp(1.6rem,3.4vw,2.35rem)] font-extrabold leading-tight text-brand-navy">
+          <p className="text-xs font-bold tracking-[0.16em] text-[#2cb673]">OUR PROCESS</p>
+          <h2 className="mx-auto mt-3 max-w-3xl font-display text-[clamp(1.7rem,3.5vw,2.4rem)] font-extrabold leading-tight text-[#0a1c3e]">
             We Ensure Smooth Flow in Our Process with 100% Results
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-slate-500">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#64748B]">
             From the first conversation to long-term maintenance, every step is planned to keep
             your solar project clear, efficient, and dependable.
           </p>
         </div>
 
-        <div className="relative mx-auto mt-10 w-full max-w-[980px]">
+        <div className="relative mx-auto mt-8 w-full max-w-[1280px] sm:mt-10">
           <Image
             src="/process-infinity.png"
             alt="Our process: Solar Energy Assessment, System Design, Installation, Monitoring and Support"
-            width={1200}
-            height={700}
-            className="h-auto w-full"
-            sizes="(max-width: 1024px) 100vw, 980px"
+            width={1600}
+            height={940}
+            className="h-auto w-full scale-[1.02] sm:scale-105"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            priority
           />
         </div>
       </section>
 
       <section className="bg-[#eef3f8] px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto grid max-w-[1280px] items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
+          {/* What We Provide — image 3 */}
           <div className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:p-8">
-            <p className="text-xs font-bold tracking-[0.14em] text-brand-green">WHAT WE PROVIDE</p>
-            <h3 className="mt-3 max-w-md font-display text-[clamp(1.4rem,2.5vw,1.85rem)] font-extrabold leading-tight text-brand-navy">
+            <p className="text-xs font-bold tracking-[0.14em] text-[#2cb673]">WHAT WE PROVIDE</p>
+            <h3 className="mt-3 max-w-lg font-display text-[clamp(1.45rem,2.6vw,1.9rem)] font-extrabold leading-tight text-[#0A2540]">
               Reliable Solar Systems for Every Energy Need
             </h3>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-slate-500 sm:text-[0.95rem]">
+            <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-[#4A5568] sm:text-base">
               Choose the right solar setup for your site, power usage, backup requirement, and
               long-term energy goals.
             </p>
 
-            <div className="mt-7 grid flex-1 content-start gap-3 sm:grid-cols-2">
+            <div className="mt-7 grid flex-1 content-start gap-3.5 sm:grid-cols-2">
               {provideItems.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`group flex items-start gap-3 rounded-xl border border-slate-200 bg-white px-3.5 py-3.5 transition hover:-translate-y-1 hover:border-brand-green/50 hover:shadow-[0_12px_28px_rgba(15,23,42,0.08)] ${
-                    "sub" in item ? "sm:min-h-[88px]" : ""
+                  className={`group flex items-center gap-3.5 rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] px-3.5 py-4 transition hover:-translate-y-0.5 hover:border-[#2cb673]/45 hover:bg-white hover:shadow-[0_10px_24px_rgba(15,23,42,0.08)] ${
+                    "sub" in item ? "sm:min-h-[96px] sm:items-start" : ""
                   }`}
                 >
-                  <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#e8f1fb] text-brand-blue transition group-hover:bg-brand-green group-hover:text-white">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#EDF2F7] text-[#3182CE] transition group-hover:bg-[#2cb673] group-hover:text-white">
                     <ProvideIcon type={item.icon} />
                   </span>
-                  <span>
-                    <span className="block text-sm font-semibold leading-snug text-brand-navy">
+                  <span className={"sub" in item ? "pt-0.5" : ""}>
+                    <span className="block text-[15px] font-bold leading-snug text-[#0A2540]">
                       {item.label}
                     </span>
                     {"sub" in item ? (
-                      <span className="mt-1 block text-xs leading-relaxed text-slate-500">
+                      <span className="mt-1 block text-[13px] leading-relaxed text-[#64748B]">
                         {item.sub}
                       </span>
                     ) : null}
@@ -220,28 +255,29 @@ export default function ProcessSection() {
             </div>
           </div>
 
-          <div className="flex h-full flex-col rounded-2xl bg-brand-navy p-6 text-white shadow-[0_10px_30px_rgba(15,23,42,0.18)] sm:p-8">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-green">
+          {/* Why Choose Us — image 2 */}
+          <div className="flex h-full flex-col rounded-2xl bg-[#0D529C] p-6 text-white shadow-[0_12px_32px_rgba(13,82,156,0.3)] sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2bb673]">
               Why Choose Us
             </p>
-            <h3 className="mt-3 max-w-md font-display text-[clamp(1.4rem,2.5vw,1.85rem)] font-extrabold leading-tight sm:text-4xl sm:leading-tight">
+            <h3 className="mt-3 max-w-md font-display text-[clamp(1.5rem,2.7vw,2rem)] font-extrabold leading-tight text-white">
               Built for dependable solar performance
             </h3>
-            <p className="mt-3 max-w-md text-sm leading-relaxed text-white/70 sm:text-[0.95rem] sm:leading-7">
+            <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/95 sm:text-base sm:leading-7">
               Our team handles planning, materials, installation, monitoring, and support so your
               system keeps producing with fewer interruptions.
             </p>
 
-            <ul className="mt-7 flex flex-1 flex-col justify-between divide-y divide-white/10">
+            <ul className="mt-8 flex flex-1 flex-col gap-3.5">
               {whyItems.map((item) => (
                 <li
                   key={item.label}
-                  className="group flex items-center gap-3.5 py-3.5 first:pt-0 last:pb-0"
+                  className="group flex items-center gap-4 rounded-xl border border-white/30 bg-[#0a4585]/35 px-4 py-4 transition hover:border-[#2bb673]/70 hover:bg-white/5"
                 >
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-brand-green text-white transition group-hover:scale-110 group-hover:bg-white group-hover:text-brand-green">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#2bb673] text-white">
                     <WhyIcon type={item.icon} />
                   </span>
-                  <span className="text-[0.95rem] font-medium text-white transition group-hover:text-brand-green">
+                  <span className="text-[15px] font-semibold text-white sm:text-base">
                     {item.label}
                   </span>
                 </li>

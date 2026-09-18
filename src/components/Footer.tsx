@@ -3,16 +3,16 @@ import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
 
 const productLinks = [
-  { label: "reneμ Home", href: "/products/samatha-home#renemu-home" },
-  { label: "reneμ Elite", href: "/products/samatha-elite#renemu-elite" },
-  { label: "reneμ Plus", href: "/products/samatha-plus#renemu-plus" },
+  { label: "reneμX Home", href: "/products/samatha-home#renemu-home" },
+  { label: "reneμX Elite", href: "/products/samatha-elite#renemu-elite" },
+  { label: "reneμX Plus", href: "/products/samatha-plus#renemu-plus" },
   { label: "Services & AMC Support", href: "/services" },
 ];
 
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/#products" },
-  { label: "Projects", href: "/projects" },
+  { label: "Solutions", href: "/solutions/on-grid" },
   { label: "Services", href: "/services" },
   { label: "About Us", href: "/about" },
   { label: "Blog", href: "/blog" },
@@ -36,25 +36,50 @@ function InstagramIcon() {
   );
 }
 
+function FooterLogo() {
+  return (
+    <Link href="/" className="inline-flex items-center gap-3" aria-label="Samatha Green Energy Solutions">
+      <span className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full sm:h-14 sm:w-14">
+        <Image
+          src="/logo.png"
+          alt=""
+          width={120}
+          height={120}
+          className="absolute left-0 top-1/2 h-[130%] w-auto max-w-none -translate-y-1/2 object-cover object-left"
+        />
+      </span>
+      <span className="flex flex-col">
+        <span className="font-display text-[1.35rem] font-extrabold leading-none tracking-[0.04em] text-white sm:text-[1.5rem]">
+          SAMATHA
+        </span>
+        <span
+          className="mt-1.5 h-[3px] w-full max-w-[168px] rounded-full"
+          style={{
+            background:
+              "linear-gradient(90deg,#f59e0b,#eab308,#1d4f91,#38bdf8,#22c55e,#ef4444,#94a3b8)",
+          }}
+          aria-hidden="true"
+        />
+        <span className="mt-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-white sm:text-[0.68rem]">
+          Green Energy Solutions
+        </span>
+      </span>
+    </Link>
+  );
+}
+
 export default function Footer({ showCta = true }: { showCta?: boolean }) {
   return (
     <div>
       {showCta ? <CtaBanner /> : null}
-      <footer id="contact" className="bg-brand-navy text-white">
+      <footer id="contact" className="bg-[#071f3b] text-white">
+        <div className="h-[3px] w-full bg-gradient-to-r from-[#0A4D8D] via-[#1a8f7a] to-[#35B56F]" />
         <div className="mx-auto grid max-w-[1280px] gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_0.8fr_0.9fr_1.2fr] lg:gap-8 lg:px-8 lg:py-16">
           <div>
-            <Link href="/" className="inline-flex items-center">
-              <Image
-                src="/logo.png"
-                alt="Samatha Green Energy Solutions"
-                width={280}
-                height={64}
-                className="h-14 w-auto object-contain sm:h-16"
-              />
-            </Link>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
-              Professional solar panel installation, hybrid systems, and long-term support for
-              homes, businesses, and industrial projects across Bengaluru and beyond.
+            <FooterLogo />
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white">
+              Professional solar panel installation, rooftop solar solutions, maintenance, and
+              renewable energy services for homes, businesses, and industries.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
@@ -62,7 +87,7 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-brand-green hover:text-brand-green"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-brand-green hover:text-white"
               >
                 <FacebookIcon />
               </a>
@@ -71,7 +96,7 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-brand-green hover:text-brand-green"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-brand-green hover:text-white"
               >
                 <InstagramIcon />
               </a>
@@ -79,14 +104,11 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
           </div>
 
           <div>
-            <h3 className="text-base font-bold">Quick Links</h3>
+            <h3 className="text-base font-bold text-white">Quick Links</h3>
             <ul className="mt-4 space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/70 transition hover:text-brand-green"
-                  >
+                  <Link href={link.href} className="text-sm text-white transition hover:text-brand-green">
                     {link.label}
                   </Link>
                 </li>
@@ -95,14 +117,11 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
           </div>
 
           <div>
-            <h3 className="text-base font-bold">Products</h3>
+            <h3 className="text-base font-bold text-white">Products</h3>
             <ul className="mt-4 space-y-2.5">
               {productLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/70 transition hover:text-brand-green"
-                  >
+                  <Link href={link.href} className="text-sm text-white transition hover:text-brand-green">
                     {link.label}
                   </Link>
                 </li>
@@ -111,8 +130,8 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
           </div>
 
           <div>
-            <h3 className="text-base font-bold">Contact</h3>
-            <ul className="mt-4 space-y-3.5 text-sm text-white/75">
+            <h3 className="text-base font-bold text-white">Contact</h3>
+            <ul className="mt-4 space-y-3.5 text-sm text-white">
               <li className="flex items-start gap-3">
                 <span className="mt-0.5 text-brand-green">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -124,8 +143,8 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
                     />
                   </svg>
                 </span>
-                <a href="tel:8050018267" className="transition hover:text-brand-green">
-                  8050018267
+                <a href="tel:+918050018267" className="transition hover:text-brand-green">
+                  +91 80500 18267
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -135,10 +154,7 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
                     <path d="M4 7L12 13L20 7" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
                   </svg>
                 </span>
-                <a
-                  href="mailto:enquiry@samatha.green"
-                  className="transition hover:text-brand-green"
-                >
+                <a href="mailto:enquiry@samatha.green" className="transition hover:text-brand-green">
                   enquiry@samatha.green
                 </a>
               </li>
@@ -154,7 +170,7 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
                   </svg>
                 </span>
                 <span>
-                  No #53, Kowdenahalli, Kalkere Main Rd
+                  No #53, Kowdenahalli, Kalkere Main Rd,
                   <br />
                   Bengaluru, Karnataka 560016
                 </span>
@@ -173,9 +189,9 @@ export default function Footer({ showCta = true }: { showCta?: boolean }) {
         </div>
 
         <div className="border-t border-white/10">
-          <p className="mx-auto max-w-[1280px] px-4 py-4 text-center text-xs leading-relaxed text-white/65 sm:px-6 lg:px-8 sm:text-sm">
-            Copyright © 2024 Samatha Green Energy Solutions Pvt Ltd. All rights reserved. Powered by{" "}
-            <span className="text-brand-green">Green Glow Solutions</span>.
+          <p className="mx-auto max-w-[1280px] px-4 py-4 text-center text-xs leading-relaxed text-white/80 sm:px-6 lg:px-8 sm:text-sm">
+            Copyright © 2026 Samatha Green Energy Solutions Pvt Ltd. All rights reserved. Powered by{" "}
+            <span className="text-brand-green">DreamBuzz Solutions</span>.
           </p>
         </div>
       </footer>

@@ -9,9 +9,9 @@ const categories = [
     id: "home",
     anchor: "renemu-home",
     tagline: "INDEPENDENT HOMES & SMART LIVING",
-    title: "reneμ Home",
+    title: "reneμX Home",
     description:
-      "Designed for independent homes seeking smarter energy management, reneμ Home combines clean energy solutions with intelligent monitoring for greater savings, convenience, and energy independence.",
+      "Designed for independent homes seeking smarter energy management, reneμX Home combines clean energy solutions with intelligent monitoring for greater savings, convenience, and energy independence.",
     icon: "home",
     image: "/service-residential.jpg",
     solutions: [
@@ -31,9 +31,9 @@ const categories = [
     id: "elite",
     anchor: "renemu-elite",
     tagline: "PREMIUM VILLAS & LUXURY SPACES",
-    title: "reneμ Elite",
+    title: "reneμX Elite",
     description:
-      "Crafted for premium villas and luxury spaces, reneμ Elite delivers advanced renewable energy solutions that seamlessly integrate sustainability, aesthetics, and high-performance energy management.",
+      "Crafted for premium villas and luxury spaces, reneμX Elite delivers advanced renewable energy solutions that seamlessly integrate sustainability, aesthetics, and high-performance energy management.",
     icon: "elite",
     image: "/hero-energy.jpg",
     solutions: [
@@ -53,9 +53,9 @@ const categories = [
     id: "plus",
     anchor: "renemu-plus",
     tagline: "COMMERCIAL & INDUSTRIAL PROJECTS",
-    title: "reneμ Plus",
+    title: "reneμX Plus",
     description:
-      "Engineered for commercial, industrial and utility projects, reneμ Plus delivers customized renewable energy solutions tailored to complex requirements — maximizing efficiency, reliability, and long-term business value with clear ROI.",
+      "Engineered for commercial, industrial and utility projects, reneμX Plus delivers customized renewable energy solutions tailored to complex requirements — maximizing efficiency, reliability, and long-term business value with clear ROI.",
     icon: "plus",
     image: "/service-commercial.jpg",
     solutions: [
@@ -164,7 +164,7 @@ export default function ProductCategoriesSection({
       <div className="mx-auto max-w-[920px] text-center">
         <p className="text-xs font-bold tracking-[0.16em] text-brand-green">PRODUCTS</p>
         <h2 className="mt-3 font-display text-[clamp(1.6rem,3.2vw,2.25rem)] font-extrabold leading-tight text-brand-navy">
-          Our Products Categories - reneμ
+          Our Products Categories - reneμX
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-[0.95rem] leading-relaxed text-slate-500">
           Choose the right service category for your property type, energy usage, monitoring

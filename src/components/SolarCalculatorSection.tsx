@@ -6,21 +6,21 @@ import { useMemo, useState } from "react";
 const propertyOptions = [
   {
     id: "home",
-    label: "reneμ Home",
+    label: "reneμX Home",
     description: "Rooftop solar for residences",
     href: "/products/samatha-home#renemu-home",
     icon: HomeIcon,
   },
   {
     id: "elite",
-    label: "reneμ Elite",
+    label: "reneμX Elite",
     description: "Premium systems with higher savings",
     href: "/products/samatha-elite#renemu-elite",
     icon: ShieldIcon,
   },
   {
     id: "plus",
-    label: "reneμ Plus",
+    label: "reneμX Plus",
     description: "Commercial & industrial setups",
     href: "/products/samatha-plus#renemu-plus",
     icon: WrenchIcon,
@@ -117,17 +117,18 @@ export default function SolarCalculatorSection() {
 
   return (
     <section id="products" className="bg-white">
-      <div className="mx-auto max-w-[1100px] px-4 pb-10 pt-16 text-center sm:px-6 sm:pt-20 lg:px-8">
-        <h2 className="font-display text-[clamp(1.7rem,3.5vw,2.35rem)] font-extrabold tracking-tight text-brand-navy">
+      <div className="mx-auto max-w-[920px] px-4 pb-10 pt-16 text-center sm:px-6 sm:pt-20 lg:px-8">
+        <h2 className="font-sans text-[32px] font-bold leading-tight tracking-[-0.01em] text-[#001F3F] sm:text-[34px] lg:text-[36px]">
           Samatha Green Energy Solutions
         </h2>
-        <p className="mt-3 text-base font-semibold text-brand-green sm:text-lg">
+        <p className="mt-3 font-sans text-[18px] font-semibold leading-snug text-[#2cb673] sm:text-[20px]">
           Clean Energy | Smart Solutions
         </p>
-        <p className="mx-auto mt-5 max-w-3xl text-[0.98rem] leading-relaxed text-slate-500 sm:text-base">
-          Samatha is a leading EPC renewable energy provider delivering end-to-end solar
-          solutions — from consultation and design to installation and long-term support —
-          for homes, businesses, and large-scale projects.
+        <p className="mx-auto mt-5 max-w-[760px] font-sans text-[16px] font-normal leading-[1.65] text-[#4A4A4A]">
+          Samatha Green Energy Solutions is an EPC renewable energy company providing complete
+          solar solutions for residential, commercial, and industrial requirements. We deliver
+          end-to-end solar services including design, installation, storage solutions,
+          maintenance, and advanced monitoring systems.
         </p>
       </div>
 

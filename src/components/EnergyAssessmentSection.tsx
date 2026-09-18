@@ -118,20 +118,20 @@ function FeatureIcon({ type }: { type: (typeof features)[number]["icon"] }) {
 export default function EnergyAssessmentSection() {
   return (
     <section className="bg-[#eef3f8] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-      <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-[0.95fr_1.15fr] lg:gap-12 lg:items-start">
+      <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-[0.95fr_1.15fr] lg:items-start lg:gap-12">
         <div>
-          <p className="text-xs font-bold tracking-[0.16em] text-brand-green">ENERGY ASSESSMENT</p>
-          <h2 className="mt-3 max-w-md font-display text-[clamp(1.55rem,3vw,2.2rem)] font-extrabold leading-tight text-brand-navy">
+          <p className="text-xs font-bold tracking-[0.16em] text-[#2cb673]">ENERGY ASSESSMENT</p>
+          <h2 className="mt-3 max-w-md font-display text-[clamp(1.55rem,3vw,2.2rem)] font-extrabold leading-tight text-[#0A2540]">
             Smarter Energy Planning Before System Selection
           </h2>
-          <p className="mt-4 max-w-lg text-[0.98rem] leading-8 text-slate-600">
+          <p className="mt-4 max-w-lg text-base leading-8 text-[#4A5568]">
             Our Energy Assessment services provide a detailed analysis of energy consumption,
             system performance, and efficiency gaps to identify cost-saving opportunities.
             Designed for residential, commercial, and industrial facilities, they help optimize
             energy usage and improve operational performance.
           </p>
 
-          <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200 shadow-[0_12px_30px_rgba(15,23,42,0.08)]">
+          <div className="relative mt-8 aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200 shadow-[0_12px_30px_rgba(10,77,141,0.1)]">
             <Image
               src="/energy-assessment.jpg"
               alt="Technician reviewing energy assessment data on site"
@@ -146,14 +146,14 @@ export default function EnergyAssessmentSection() {
           {features.map((feature, index) => (
             <article
               key={feature.title}
-              className="rounded-2xl border border-white bg-white p-5 shadow-[0_8px_24px_rgba(15,23,42,0.05)] transition hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(15,23,42,0.1)] sm:p-6 animate-fade-up"
+              className="rounded-2xl border border-white bg-white p-5 shadow-[0_8px_24px_rgba(10,77,141,0.06)] transition hover:-translate-y-1 hover:shadow-[0_16px_34px_rgba(10,77,141,0.12)] animate-fade-up sm:p-6"
               style={{ animationDelay: `${index * 0.08}s` }}
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-green/12 text-brand-green">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EDF2F7] text-[#0A4D8D]">
                 <FeatureIcon type={feature.icon} />
               </span>
-              <h3 className="mt-4 text-lg font-extrabold text-brand-navy">{feature.title}</h3>
-              <p className="mt-2 leading-7 text-slate-600">{feature.description}</p>
+              <h3 className="mt-4 text-lg font-extrabold text-[#0A2540]">{feature.title}</h3>
+              <p className="mt-2 leading-7 text-[#64748B]">{feature.description}</p>
             </article>
           ))}
         </div>

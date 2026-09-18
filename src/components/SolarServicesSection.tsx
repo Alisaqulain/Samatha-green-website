@@ -289,7 +289,7 @@ function CheckIcon() {
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
-      className="mt-0.5 shrink-0 text-brand-blue"
+      className="mt-0.5 shrink-0 text-[#2cb673]"
     >
       <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.7" />
       <path
@@ -307,11 +307,11 @@ export default function SolarServicesSection() {
   return (
     <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
       <div className="mx-auto max-w-[1100px] text-center">
-        <p className="text-xs font-bold tracking-[0.16em] text-brand-green">SERVICES</p>
-        <h2 className="mt-3 font-display text-[clamp(1.6rem,3.2vw,2.35rem)] font-extrabold text-brand-navy">
+        <p className="text-xs font-bold tracking-[0.16em] text-[#2cb673]">SERVICES</p>
+        <h2 className="mt-3 font-display text-[clamp(1.6rem,3.2vw,2.35rem)] font-extrabold text-[#0A2540]">
           Solar and Renewable Energy Services
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-[0.98rem] leading-8 text-slate-600">
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#64748B]">
           Explore our complete product range for homes, businesses, institutions, industries, and
           community energy requirements.
         </p>
@@ -321,13 +321,11 @@ export default function SolarServicesSection() {
         {services.map((service, index) => (
           <article
             key={service.title}
-            className="overflow-hidden rounded-3xl border border-slate-100 bg-[#f4f8fc] shadow-[0_12px_34px_rgba(15,23,42,0.06)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.1)]"
+            className="overflow-hidden rounded-3xl border border-[#E2E8F0] bg-[#f4f8fc] shadow-[0_12px_34px_rgba(10,77,141,0.08)] transition hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(10,77,141,0.14)]"
           >
             <div
               className={`grid lg:grid-cols-2 ${
-                service.imageRight || index % 2 === 1
-                  ? "lg:[&>*:first-child]:order-2"
-                  : ""
+                service.imageRight || index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
               <div className="relative min-h-[280px] lg:min-h-[420px]">
@@ -338,23 +336,23 @@ export default function SolarServicesSection() {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/40 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-brand-navy/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A4D8D]/45 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#0A4D8D]/15" />
               </div>
-              <div className="p-6 sm:p-8 lg:p-10">
-                <p className="text-xs font-bold tracking-[0.14em] text-brand-green">
+              <div className="bg-white p-6 sm:p-8 lg:p-10">
+                <p className="text-xs font-bold tracking-[0.14em] text-[#2cb673]">
                   {service.label}
                 </p>
-                <h3 className="mt-2 font-display text-[clamp(1.4rem,2.4vw,1.9rem)] font-extrabold text-brand-navy">
+                <h3 className="mt-2 font-display text-[clamp(1.4rem,2.4vw,1.9rem)] font-extrabold text-[#0A2540]">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-[0.95rem] leading-7 text-slate-600">
+                <p className="mt-3 text-[0.95rem] leading-7 text-[#4A5568]">
                   {service.description}
                 </p>
                 <ul className="mt-5 space-y-3">
                   {service.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-3 text-sm leading-relaxed text-slate-700"
+                      className="flex items-start gap-3 text-sm leading-relaxed text-[#334155]"
                     >
                       <CheckIcon />
                       <span>{point}</span>

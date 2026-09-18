@@ -7,9 +7,9 @@ import { useEffect, useRef, useState } from "react";
 import { useQuoteModal } from "@/components/QuoteModal";
 
 const productItems = [
-  { label: "reneμ Home", href: "/products/samatha-home#renemu-home" },
-  { label: "reneμ Elite", href: "/products/samatha-elite#renemu-elite" },
-  { label: "reneμ Plus", href: "/products/samatha-plus#renemu-plus" },
+  { label: "reneμX Home", href: "/products/samatha-home#renemu-home" },
+  { label: "reneμX Elite", href: "/products/samatha-elite#renemu-elite" },
+  { label: "reneμX Plus", href: "/products/samatha-plus#renemu-plus" },
 ];
 
 const solutionItems = [

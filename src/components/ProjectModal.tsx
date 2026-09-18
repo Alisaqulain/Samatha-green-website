@@ -13,7 +13,7 @@ export function ProjectCard({
 }) {
   const content = (
     <>
-      <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-slate-200">
+      <div className="aspect-[4/3] overflow-hidden rounded-[14px] bg-slate-200">
         <div className="relative h-full w-full">
           <Image
             src={project.image}
@@ -24,12 +24,16 @@ export function ProjectCard({
           />
         </div>
       </div>
-      <div className="flex min-h-32 flex-col pt-4">
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-green">
+      <div className="flex min-h-[7.5rem] flex-col pt-4 text-left">
+        <p className="text-[12px] font-bold uppercase tracking-[0.14em] text-[#2F9B69]">
           {project.category}
         </p>
-        <h3 className="mt-2 text-xl font-extrabold text-brand-navy">{project.title}</h3>
-        <p className="mt-auto pt-3 text-sm font-semibold text-slate-500">{project.location}</p>
+        <h3 className="mt-2 text-[1.05rem] font-extrabold leading-[1.25] text-[#001F3F] sm:text-[1.15rem]">
+          {project.title}
+        </h3>
+        <p className="mt-auto pt-2.5 text-[13px] font-normal leading-snug text-[#8a94a6]">
+          {project.location}
+        </p>
       </div>
     </>
   );
@@ -104,8 +108,8 @@ export default function ProjectModal({
             >
               {project.title}
             </h2>
-            <p className="mt-2 flex items-center gap-2 text-sm font-semibold text-slate-500">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <p className="mt-2 flex items-center gap-2 text-[13px] font-normal text-[#8a94a6]">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path
                   d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"
                   stroke="currentColor"
@@ -134,14 +138,16 @@ export default function ProjectModal({
         </div>
 
         <div className="p-4 sm:p-7">
-          <p className="max-w-3xl leading-7 text-slate-600">{project.description}</p>
+          <p className="max-w-3xl text-[15px] leading-7 text-slate-600 sm:text-base">
+            {project.description}
+          </p>
 
           {project.specs.length > 0 ? (
-            <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-5 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
               {project.specs.map((spec) => (
                 <div
                   key={spec}
-                  className="rounded-xl bg-[#eef3f8] px-3 py-2.5 text-sm font-bold leading-5 text-brand-navy sm:rounded-2xl sm:px-4 sm:py-3"
+                  className="rounded-xl bg-[#eef3f8] px-3.5 py-3 text-[13px] font-bold leading-5 text-[#001F3F] sm:text-sm"
                 >
                   {spec}
                 </div>
@@ -183,9 +189,9 @@ export default function ProjectModal({
                 {activeTab.label}
               </p>
               <h3 className="mt-3 text-xl font-extrabold leading-tight text-brand-navy sm:text-2xl">
-                {project.title}
+                {activeTab.heading ?? project.title}
               </h3>
-              <p className="mt-4 leading-7 text-slate-600">{activeTab.description}</p>
+              <p className="mt-4 text-[15px] leading-7 text-slate-600">{activeTab.description}</p>
             </div>
           </div>
         </div>

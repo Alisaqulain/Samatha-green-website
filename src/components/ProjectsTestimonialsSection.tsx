@@ -156,13 +156,19 @@ function QuoteIcon() {
 }
 
 export default function ProjectsTestimonialsSection() {
-  const projectPages = useMemo(() => {
-    const pages = [];
-    for (let i = 0; i < projects.length; i += 3) {
-      pages.push(projects.slice(i, i + 3));
-    }
-    return pages;
-  }, []);
+  const visibleCount = 3;
+  const projectSlideCount = projects.length;
+
+  const [projectPage, setProjectPage] = useState(0);
+  const [testimonialPage, setTestimonialPage] = useState(0);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [paused, setPaused] = useState(false);
+
+  const visibleProjects = useMemo(() => {
+    return Array.from({ length: Math.min(visibleCount, projects.length) }, (_, offset) => {
+      return projects[(projectPage + offset) % projects.length];
+    });
+  }, [projectPage]);
 
   const testimonialPages = useMemo(() => {
     const pages = [];
@@ -171,11 +177,6 @@ export default function ProjectsTestimonialsSection() {
     }
     return pages;
   }, []);
-
-  const [projectPage, setProjectPage] = useState(0);
-  const [testimonialPage, setTestimonialPage] = useState(0);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused || testimonialPages.length <= 1) return;
@@ -186,9 +187,9 @@ export default function ProjectsTestimonialsSection() {
   }, [paused, testimonialPages.length]);
 
   const prevProjects = () =>
-    setProjectPage((p) => (p === 0 ? projectPages.length - 1 : p - 1));
+    setProjectPage((p) => (p === 0 ? projectSlideCount - 1 : p - 1));
   const nextProjects = () =>
-    setProjectPage((p) => (p === projectPages.length - 1 ? 0 : p + 1));
+    setProjectPage((p) => (p === projectSlideCount - 1 ? 0 : p + 1));
   const prevTestimonials = () =>
     setTestimonialPage((p) => (p === 0 ? testimonialPages.length - 1 : p - 1));
   const nextTestimonials = () =>
@@ -213,9 +214,9 @@ export default function ProjectsTestimonialsSection() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {projectPages[projectPage].map((project) => (
+            {visibleProjects.map((project) => (
               <ProjectCard
-                key={project.title}
+                key={`${project.title}-${project.location}`}
                 project={project}
                 onClick={() => setSelectedProject(project)}
               />
@@ -224,7 +225,7 @@ export default function ProjectsTestimonialsSection() {
 
           <div className="mt-8 flex flex-col items-center gap-6">
             <Dots
-              count={projectPages.length}
+              count={projectSlideCount}
               active={projectPage}
               onSelect={setProjectPage}
             />
